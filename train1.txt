@@ -1,0 +1,218 @@
+                   all        638        770      0.891      0.891      0.932        0.8
+           Green Light         77        110      0.882      0.816      0.878      0.531
+             Red Light         71         94       0.79      0.638      0.726      0.461
+        Speed Limit 10          2          3      0.731      0.924      0.913      0.674
+       Speed Limit 100         45         46      0.864      0.935      0.979      0.861
+       Speed Limit 110         21         21      0.942      0.772      0.853      0.756
+       Speed Limit 120         40         44      0.895      0.977      0.974      0.891
+        Speed Limit 20         46         46      0.914      0.978       0.99      0.903
+        Speed Limit 30         60         60       0.92      0.883      0.947      0.889
+        Speed Limit 40         51         53      0.936      0.962      0.982      0.879
+        Speed Limit 50         47         50      0.858       0.86      0.928      0.826
+        Speed Limit 60         45         45      0.846      0.911       0.95      0.869
+        Speed Limit 70         52         53      0.901      0.861      0.934      0.838
+        Speed Limit 80         60         61       0.96      0.934      0.976      0.876
+        Speed Limit 90         33         34      0.938      0.912      0.954      0.808
+                  Stop         50         50      0.987          1      0.995      0.932
+Speed: 0.2ms preprocess, 2.3ms inference, 0.0ms loss, 2.0ms postprocess per image
+Results saved to [1mruns\detect\val[0m
+ Jupyter Notebook^
+
+---------------------------------------------------------------------
+ROBOFLOW:
+
+(base) C:\Users\Dhairya Parikh\Desktop\PROJECT-1-Real Time Traffic Sign Detection Using YOLOv8> cmd /C ""c:\Users\Dhairya Parikh\anaconda3\python.exe" "c:\Users\Dhairya Parikh\.vscode\extensions\ms-python.debugpy-2024.12.0-win32-x64\bundled\libs\debugpy\adapter/../..\debugpy\launcher" 55556 -- "C:\Users\Dhairya Parikh\Desktop\PROJECT-1-Real Time Traffic Sign Detection Using YOLOv8\train.py" "
+New https://pypi.org/project/ultralytics/8.3.29 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.27 🚀 Python-3.9.7 torch-2.5.1+cu124 CUDA:0 (NVIDIA GeForce RTX 3060 Laptop GPU, 6144MiB)
+engine\trainer: task=detect, mode=train, model=C:/Users/Dhairya Parikh/Desktop/PROJECT-1-Real Time Traffic Sign Detection Using YOLOv8/runs/detect/train11/weights/best.pt, data=C:/Users/Dhairya Parikh/Desktop/PROJECT-1-Real Time Traffic Sign Detection Using YOLOv8/datasets/traffic_sign_classification_dataset/dataset.yaml, epochs=10, time=None, patience=100, batch=32, imgsz=640, save=True, save_period=-1, cache=False, device=cuda:0, workers=8, project=None, name=train20, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=4, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs\detect\train20
+Overriding model.yaml nc=15 with nc=85
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]
+ 22        [15, 18, 21]  1    942649  ultralytics.nn.modules.head.Detect           [85, [64, 128, 256]]
+YOLOv8n summary: 225 layers, 3,202,185 parameters, 3,202,169 gradients, 9.1 GFLOPs
+
+Transferred 319/355 items from pretrained weights
+TensorBoard: Start with 'tensorboard --logdir runs\detect\train20', view at http://localhost:6006/
+Freezing layer 'model.22.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+train: Scanning C:\Users\Dhairya Parikh\Desktop\PROJECT-1-Real Time Traffic Sign Detection Using YOLOv8\datasets\traffic_sign_classification_dataset\tra
+val: Scanning C:\Users\Dhairya Parikh\Desktop\PROJECT-1-Real Time Traffic Sign Detection Using YOLOv8\datasets\traffic_sign_classification_dataset\test\
+Plotting labels to runs\detect\train20\labels.jpg... 
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+optimizer: AdamW(lr=0.000112, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+TensorBoard: model graph visualization added ✅
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to runs\detect\train20
+Starting training for 10 epochs...
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/10      4.51G      2.894      6.398      5.274         22        640: 100%|██████████| 139/139 [00:43<00:00,  3.23it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:17<00:00,  1.21it/s]
+                   all       1288       1288     0.0155      0.217      0.037     0.0263
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/10      4.49G     0.5054      4.065      1.427         22        640: 100%|██████████| 139/139 [00:39<00:00,  3.53it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:16<00:00,  1.24it/s]
+                   all       1288       1288      0.885      0.124      0.174      0.172
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/10      4.49G     0.2452      3.042      1.105         22        640: 100%|██████████| 139/139 [00:38<00:00,  3.64it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:16<00:00,  1.24it/s]
+                   all       1288       1288      0.751      0.209      0.262       0.26
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/10      4.49G     0.1685      2.447      1.013         22        640: 100%|██████████| 139/139 [00:43<00:00,  3.23it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:17<00:00,  1.21it/s]
+                   all       1288       1288      0.753      0.314      0.355      0.354
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/10      4.49G     0.1355      2.081     0.9774         22        640: 100%|██████████| 139/139 [00:40<00:00,  3.45it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:16<00:00,  1.26it/s]
+                   all       1288       1288      0.703      0.359      0.425      0.423
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/10      4.49G     0.1165      1.823      0.961         22        640: 100%|██████████| 139/139 [00:40<00:00,  3.40it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:16<00:00,  1.26it/s]
+                   all       1288       1288      0.725      0.407      0.481      0.479
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/10      4.49G     0.1068      1.652     0.9506         22        640: 100%|██████████| 139/139 [00:40<00:00,  3.43it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:16<00:00,  1.26it/s]
+                   all       1288       1288      0.771      0.422        0.5      0.498
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/10      4.49G    0.09906      1.542     0.9491         22        640: 100%|██████████| 139/139 [00:40<00:00,  3.42it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:16<00:00,  1.27it/s]
+                   all       1288       1288      0.692      0.491      0.531      0.529
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/10      4.49G    0.09405      1.465     0.9407         22        640: 100%|██████████| 139/139 [00:41<00:00,  3.34it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:16<00:00,  1.24it/s]
+                   all       1288       1288      0.655      0.534       0.55      0.548
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/10      4.49G    0.08912      1.412     0.9386         22        640: 100%|██████████| 139/139 [00:41<00:00,  3.32it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:17<00:00,  1.23it/s]
+                   all       1288       1288      0.732      0.505      0.558      0.557
+
+10 epochs completed in 0.176 hours.
+Optimizer stripped from runs\detect\train20\weights\last.pt, 6.6MB
+Optimizer stripped from runs\detect\train20\weights\best.pt, 6.6MB
+
+Validating runs\detect\train20\weights\best.pt...
+Ultralytics 8.3.27 🚀 Python-3.9.7 torch-2.5.1+cu124 CUDA:0 (NVIDIA GeForce RTX 3060 Laptop GPU, 6144MiB)
+YOLOv8n summary (fused): 168 layers, 3,196,859 parameters, 0 gradients, 8.9 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 21/21 [00:10<00:00,  2.00it/s]
+                   all       1288       1288      0.728      0.505      0.558      0.556
+ALL MOTOR VEHICLE PROHIBITED          5          5      0.231        0.8      0.297      0.297
+       AXLE LOAD LIMIT          5          5          0          0     0.0924     0.0924
+         BARRIER AHEAD          2          2          1          0    0.00858    0.00858
+BULLOCK AND HANDCART PROHIBITED          2          2          1          0     0.0246     0.0246
+    BULLOCK PROHIBITED          5          5          1          0     0.0564     0.0535
+                CATTLE         11         11      0.494      0.636      0.581      0.581
+      COMPULSORY AHEAD         10         10      0.394          1      0.954      0.954
+COMPULSORY AHEAD OR TURN LEFT          4          4          1      0.444      0.648      0.648
+COMPULSORY AHEAD OR TURN RIGHT         12         12      0.335      0.333      0.393      0.393
+COMPULSORY CYCLE TRACK          4          4          1          0      0.623      0.617
+  COMPULSORY KEEP LEFT         16         16       0.61        0.5      0.429      0.429
+ COMPULSORY KEEP RIGHT         12         12      0.232          1      0.995      0.995
+COMPULSORY MINIMUM SPEED          8          8      0.793       0.75      0.869      0.869
+ COMPULSORY SOUND HORN         12         12      0.766          1      0.995      0.995
+  COMPULSORY TURN LEFT         12         12       0.86      0.511      0.662      0.662
+COMPULSORY TURN LEFT AHEAD          4          4      0.796      0.978      0.945      0.945
+ COMPULSORY TURN RIGHT          2          2          1          0     0.0098     0.0098
+COMPULSORY TURN RIGHT AHEAD          4          4          0          0     0.0616     0.0555
+            CROSS ROAD         32         32      0.584        0.5      0.552      0.552
+        CYCLE CROSSING         12         12      0.452          1      0.916      0.916
+      CYCLE PROHIBITED         12         12      0.436        0.5      0.591      0.591
+         DANGEROUS DIP          4          4          1          0       0.15       0.15
+             DIRECTION          1          1          1          0    0.00672    0.00672
+         FALLING ROCKS          8          8      0.145      0.125      0.217      0.215
+                 FERRY          1          1          1          0          0          0
+         GAP IN MEDIAN         24         24      0.862      0.783      0.845      0.845
+              GIVE WAY         16         16      0.891      0.938      0.938      0.938
+GUARDED LEVEL CROSSING          4          4      0.617        0.5      0.788      0.788
+   HANDCART PROHIBITED          4          4          1          0      0.548      0.548
+          HEIGHT LIMIT          8          8      0.322        0.5      0.468      0.463
+       HORN PROHIBITED         17         17      0.614      0.824      0.887      0.886
+    HUMP OR ROUGH ROAD         16         16      0.441      0.688      0.706      0.706
+    LEFT HAIR PIN BEND          3          3          1          0       0.14      0.132
+       LEFT HAND CURVE          6          6          0          0      0.191      0.191
+     LEFT REVERSE BEND          7          7      0.195      0.429      0.228      0.225
+  LEFT TURN PROHIBITED         43         43      0.861          1      0.995      0.995
+          LENGTH LIMIT          5          5      0.398      0.278       0.46       0.46
+            LOAD LIMIT          3          3          1          0     0.0327     0.0322
+          LOOSE GRAVEL          8          8          1      0.139       0.43      0.428
+           MEN AT WORK         18         18      0.397      0.952      0.701      0.701
+         NARROW BRIDGE          4          4          1          0     0.0649     0.0645
+     NARROW ROAD AHEAD          8          8      0.258      0.608      0.243      0.243
+              NO ENTRY         58         58      0.912          1      0.995      0.995
+            NO PARKING         15         15      0.873      0.867      0.958      0.938
+NO STOPPING OR STANDING         81         81      0.962          1      0.995      0.995
+ OVERTAKING PROHIBITED          9          9      0.549      0.556      0.646      0.606
+      PASS EITHER SIDE          8          8       0.88          1      0.982      0.982
+   PEDESTRIAN CROSSING         41         41      0.737      0.951       0.98       0.98
+ PEDESTRIAN PROHIBITED         11         11      0.584      0.818      0.904      0.904
+PRIORITY FOR ONCOMING VEHICLES          5          5      0.972        0.6      0.694      0.694
+QUAY SIDE OR RIVER BANK         15         15      0.305      0.533        0.5      0.499
+      RESTRICTION ENDS          3          3          1          0          0          0
+   RIGHT HAIR PIN BEND          5          5          1          0      0.143      0.136
+      RIGHT HAND CURVE          6          6          1          0     0.0985     0.0985
+    RIGHT REVERSE BEND          4          4          1          0      0.027      0.027
+ RIGHT TURN PROHIBITED          9          9      0.392          1      0.995      0.995
+     ROAD WIDENS AHEAD          3          3          1          0      0.166      0.166
+            ROUNDABOUT         17         17      0.615      0.529      0.566      0.562
+          SCHOOL AHEAD         14         14      0.725      0.643      0.691       0.67
+        SIDE ROAD LEFT         12         12      0.288      0.667      0.444      0.444
+       SIDE ROAD RIGHT          4          4          1          0      0.104     0.0975
+         SLIPPERY ROAD         13         13      0.368          1      0.769      0.769
+        SPEED LIMIT 15         13         13      0.534          1      0.995      0.995
+        SPEED LIMIT 20          3          3          1          0      0.583      0.582
+        SPEED LIMIT 30         80         80      0.729      0.963      0.972      0.972
+        SPEED LIMIT 40         57         57      0.911          1      0.995      0.995
+         SPEED LIMIT 5         33         33      0.985          1      0.995      0.995
+        SPEED LIMIT 50         67         67      0.938      0.955      0.983      0.983
+        SPEED LIMIT 60         64         64      0.889          1      0.994      0.994
+        SPEED LIMIT 70         54         54      0.858          1      0.991      0.991
+        SPEED LIMIT 80         64         64      0.694          1       0.97       0.97
+STAGGERED INTERSECTION          6          6          1          0      0.331      0.331
+          STEEP ASCENT          5          5          1          0      0.127      0.119
+         STEEP DESCENT          3          3          1          0     0.0367     0.0327
+                  STOP         17         17      0.827          1      0.995      0.995
+   STRAIGHT PROHIBITED         18         18      0.749          1      0.995      0.995
+      TONGA PROHIBITED          2          2          1          0      0.077      0.077
+        TRAFFIC SIGNAL          4          4      0.913          1      0.995      0.995
+      TRUCK PROHIBITED          6          6      0.736      0.333      0.462      0.462
+            TURN RIGHT         33         33      0.803       0.97      0.968      0.968
+        T INTERSECTION          4          4          1          0      0.526      0.526
+UNGUARDED LEVEL CROSSING          1          1          1          0     0.0061     0.0061
+     U TURN PROHIBITED         12         12      0.565      0.917      0.901      0.901
+           WIDTH LIMIT          6          6          1          0      0.255      0.249
+        Y INTERSECTION          9          9      0.623      0.889      0.878      0.878
+Speed: 0.2ms preprocess, 1.9ms inference, 0.0ms loss, 1.4ms postprocess per image
+Results saved to runs\detect\train20
